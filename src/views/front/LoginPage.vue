@@ -23,7 +23,7 @@
     </v-row>
 
     <!-- Kayıt Dialog -->
-    <v-dialog v-model="registerDialog" max-width="70% !important">
+    <v-dialog v-model="registerDialog" max-width="100% !important">
       <v-card>
         <v-card-title>
           <span class="headline">Kayıt Ol</span>
@@ -44,7 +44,9 @@
           <v-btn text @click="registerDialog = false">Kapat</v-btn>
         </v-card-actions>
       </v-card>
+
     </v-dialog>
+
   </v-container>
 </template>
 
@@ -109,8 +111,10 @@ export default {
         .then(response => {
           console.log(response)
           this.registerDialog = false;
+          alert('Kayıt işlemi başarıyla tamamlandı!');
         })
         .catch(error => {
+          alert('Kayıt işlemi sırasında hata oluştu: ' + (error.response?.data?.message || error.message));
           console.error('Kayıt etme hatası:', error.response ? error.response.data : error.message);
         });
     }

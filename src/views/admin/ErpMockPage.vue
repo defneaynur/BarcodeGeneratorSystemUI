@@ -113,7 +113,7 @@ export default {
     },
   },
   mounted() {
-    this.fetchMockProducts();
+    // this.fetchMockProducts();
   },
   methods: {
     onSearch() {

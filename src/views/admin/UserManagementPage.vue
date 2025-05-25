@@ -46,7 +46,7 @@
             <v-card-text>
               <v-form ref="categoryForm">
                 <v-text-field v-model="formData.userName" label="Kullanıcı Adı" required></v-text-field>
-                <v-text-field v-model="formData.password" label="Parola"></v-text-field>
+                <v-text-field v-model="formData.password" label="Parola" type="password" required></v-text-field>
                 <v-text-field v-model="formData.email" label="Email" required></v-text-field>
                 <v-text-field v-model="formData.name" label="Ad Soyad"></v-text-field>
               </v-form>
